@@ -1,0 +1,27 @@
+body{
+    color: floralwhite;
+    width: 15em;
+    height: 20em;
+
+}
+
+.item_image{
+    height: 70%;
+    width:95%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 2.5%;
+    background-color: cyan;
+}
+
+.item_name{
+    font-size: 120%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.buy_button{
+    position: relative;
+    bottom: 2.5%;
+    padding-top: 2.5%;
+    width: 100%;
+}

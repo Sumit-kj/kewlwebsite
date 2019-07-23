@@ -1,0 +1,26 @@
+
+   
+body{
+ background:url("https://media.giphy.com/media/B4jfJqiIxvU08/giphy.gif");
+ background-repeat: no-repeat;
+ background-size:100%;
+ background-blend-mode: darken;
+}
+li{
+    display: inline;
+    list-style-type: none;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+    font-size:220%;
+    color: aliceblue;
+}
+
+ul{
+    display:block;
+    background-color: rgb(102, 98, 98);
+}
+
+li:hover{
+    background-color: black;
+    color:cyan;
+}
