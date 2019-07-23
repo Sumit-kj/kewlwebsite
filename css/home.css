@@ -1,15 +1,9 @@
-
-   
-   .hor{
-       opacity: 0.6;
-       filter: alpha(opacity=90);
-       border: 2px solid black;
-   }
 body{
  background:url("https://media.giphy.com/media/B4jfJqiIxvU08/giphy.gif");
- 
  background-repeat: no-repeat;
  background-size:100%;
+ padding: 0;
+ margin: 0;
  
 }
 li{
@@ -29,4 +23,27 @@ ul{
 li:hover{
     background-color: black;
     color:cyan;
+}
+.card-container {
+    padding-left: 70px;
+    margin: 0;
+    margin-top: 25em;
+    width: 94%;
+    height: 70%;
+    background-color: black;
+    overflow: auto;
+    padding-bottom: 10px;
+}
+.item_image {
+    width: 200px;
+    height: 250px;
+}
+.card {
+    margin-top: 30px;
+    width: 290px;
+    float: left;
+}
+
+button{
+    width: 200px;
 }
