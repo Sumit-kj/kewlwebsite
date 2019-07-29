@@ -5,9 +5,12 @@ document.addEventListener("DOMContentLoaded",function(){
         var attr=this.parentElement.childNodes[9];
         console.log(attr);
         var val2 = parseInt(attr.innerHTML);
+        if(val2==1)
+        {
+            this.parentElement.childNodes[7].disabled=false;
+        }
         val2++;
         attr.innerHTML=val2;
-        console.log(attr);
 
     }
 
@@ -23,6 +26,7 @@ document.addEventListener("DOMContentLoaded",function(){
                 this.disabled=true;
             }
             else{
+                this.disabled=false;
             val3--;
             attr2.innerHTML=val3;
             console.log(attr2);
