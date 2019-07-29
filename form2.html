@@ -27,27 +27,65 @@
     #reg {
         width: 100px;
     }
-    #view {
+    .view {
         position: absolute;
         right: 10px;
     }
     </style>
 </head>
 <body>
-<form>
+<form id="main">
     <span>Email: </span>
-    <input type="text" name="Username"><br><br>
+        <input type="text" name="Username" required><br><br>
     <span> Username:</span>
-    <input type="text" name="Username"><br><br>
+        <input type="text" name="name" required><br><br>
     <span>Password:</span>
-    <input type="password" name="Password">
-    <button id="view"><i class="fa fa-eye"></i></button>
+        <input type="password" name="Password" id="pass" required/>
+    <button id="pass" class="view" type="button" onclick="clickVisible(event,1)"><i id="sym1" class="fa fa-eye"></i></button>
     <br><br>
     <span>Retype <br/>Password:</span>
-    <input type="password" name=" Retype Password">
-    <button id="view"><i class="fa fa-eye"></i></button>
+        <input id="confPass" type="password" name=" Retype Password" onkeyup="verifyConfPass()" required >
+    <button id="confPass" class="view" type="button" onclick="clickVisible(event,2)"><i id="sym2" class="fa fa-eye"></i></button>
     <br><br>
-    <input type="submit" id="reg" value="Register"/>
+    <input type="submit" id="reg" value="Register" onclick="myfunc()"/>
+    <script>
+
+var verifyConfPass = function() {
+  if (document.getElementById('pass').value ==
+    document.getElementById('confPass').value) {
+    document.getElementById('confPass').style.color = 'green';
+    // document.getElementById('message').innerHTML = 'matching';
+  } else {
+    document.getElementById('confPass').style.color = 'red';
+    // document.getElementById('message').innerHTML = 'not matching';
+  }
+}
+        function myfunc()
+        {
+            document.getElementById('reg').onclick=window.alert("You have successfully Registered");
+
+        }
+        function clickVisible(event,par){
+            event.preventDefault();
+            if(par==1){
+                var icon = document.getElementById("sym1");
+                var val = document.getElementById("pass");
+            }
+            else{
+            var val=document.getElementById("confPass");
+            var icon = document.getElementById("sym2");
+            }
+            if(icon.className==="fa fa-eye")
+            icon.className="fa fa-eye-slash";
+            else
+            icon.className="fa fa-eye";
+            if(val.type === 'password')
+                val.type = 'text';
+            else   
+                val.type = 'password';
+                
+        }
+    </script>
   </form> 
   </body>
   </html>
