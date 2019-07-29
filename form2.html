@@ -34,18 +34,18 @@
     </style>
 </head>
 <body>
-<form id="main">
+<form id="main" action="./php/signup.php" method="POST">
     <span>Email: </span>
         <input type="text" name="Username" required><br><br>
     <span> Username:</span>
         <input type="text" name="name" required><br><br>
     <span>Password:</span>
         <input type="password" name="Password" id="pass" required/>
-    <button id="pass" class="view" type="button" onclick="clickVisible(event,1)"><i id="sym1" class="fa fa-eye"></i></button>
+    <button id="pass1" class="view" type="button" onclick="clickVisible(event,1)"><i id="sym1" class="fa fa-eye"></i></button>
     <br><br>
     <span>Retype <br/>Password:</span>
-        <input id="confPass" type="password" name=" Retype Password" onkeyup="verifyConfPass()" required >
-    <button id="confPass" class="view" type="button" onclick="clickVisible(event,2)"><i id="sym2" class="fa fa-eye"></i></button>
+        <input id="confPass" type="password" name="Retype_Password" onkeyup="verifyConfPass()" required >
+    <button id="confPass1" class="view" type="button" onclick="clickVisible(event,2)"><i id="sym2" class="fa fa-eye"></i></button>
     <br><br>
     <input type="submit" id="reg" value="Register" onclick="myfunc()"/>
     <script>
@@ -62,7 +62,7 @@ var verifyConfPass = function() {
 }
         function myfunc()
         {
-            document.getElementById('reg').onclick=window.alert("You have successfully Registered");
+            // document.getElementById('reg').onclick=window.alert("You have successfully Registered");
 
         }
         function clickVisible(event,par){
