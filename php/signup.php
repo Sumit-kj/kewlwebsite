@@ -1,5 +1,4 @@
 <?php
-// echo "page loaded";
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
@@ -13,31 +12,27 @@ $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
       $myname=mysqli_real_escape_string($db,$_POST['name']);
       $mypassword = mysqli_real_escape_string($db,$_POST['Password']);
 
-      echo "$myusername $myname $mypassword";
-
-      $sql = "SELECT * FROM customer WHERE EMAIL = '$myusername' AND PASS = '$mypassword'";
+      $sql = "SELECT * FROM customer WHERE EMAIL = '$myusername'";
       $result = mysqli_query($db,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
 
-      $myid = $row['email'];
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       
       $count = mysqli_num_rows($result);
 
-      // If result matched $myusername and $mypassword, table row must be 1 row
-        
-      
       if($count == 1) {
         
-         header('Location: ../index.html');
          echo "<script>alert('User already exists');
          window.location.href='../form.html';</script>";
          exit;
+
       }else {
+          $myid = $row['email'];
           session_start();
           $_SESSION['customer_id']=$myusername;
-          $sql2="INSERT INTO `customer`(`EMAIL`, `NAME`, `PASS`) VALUES ($myusername,$myname,$mypassword)";
-          echo "<script>alert('Successfully Registered ');
+          
+          $sql2="INSERT INTO customer VALUES ('$myusername','$myname','$mypassword')";
+          $result = mysqli_query($db,$sql2);
+          echo "<script>alert('Successfully Registered!');
           window.location.href='../index.html';</script>";
 
       }
