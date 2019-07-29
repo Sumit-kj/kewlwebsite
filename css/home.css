@@ -18,6 +18,7 @@ li{
 ul{
     display:block;
     /* background-color: rgb(102, 98, 98); */
+    background: rgba(0, 0, 0, 0.4);
 }
 
 li:hover{
