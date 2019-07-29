@@ -1,10 +1,16 @@
 body{
  background:url("https://media.giphy.com/media/B4jfJqiIxvU08/giphy.gif");
+ 
  background-repeat: no-repeat;
  background-size:100%;
  padding: 0;
  margin: 0;
  
+}
+.cbk:hover {
+    /* url("https://data.whicdn.com/images/238644726/original.gif"); */
+    background-color:#FFFF;
+    background-repeat: no-repeat;
 }
 li{
     display: inline;
@@ -25,7 +31,7 @@ li:hover{
     background-color: black;
     color:cyan;
 }
-.card-container {
+/* .card-container {
     padding-left: 70px;
     margin: 0;
     margin-top: 25em;
@@ -34,17 +40,82 @@ li:hover{
     background-color: black;
     overflow: auto;
     padding-bottom: 10px;
+} */
+
+
+.grid-container {
+    display:grid;
+    grid-template-columns: 25% 25% 25% 20%;
+    grid-gap:20px;
+    justify-items: center;  
+        
+}
+
+.item {
+    align-self: center;
+    animation-name: initial1;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-direction:alternate;
+
+}
+
+
+#count{
+     background:transparent;
+     color:brown;
+     
+     /* display: inline; */
+     
+}
+.band1 {
+    background: lightblue;
+   
+}
+@keyframes initial1{
+    0%{
+        
+        transform: scale(0.2);
+        opacity:0.1;
+    }
+    /* 50%
+    {
+        transform: scale(0.5);
+        opacity:0.4;
+    } */
+    100%{
+            transform: scale(1);
+            opacity:1;
+    }
+}
+.band2 {
+    background: rgb(194, 230, 173);
+}
+.chain1 {
+    background: rgb(226, 230, 173);
+}
+.chain2 {
+    background: rgb(228, 173, 230);
 }
 .item_image {
     width: 200px;
-    height: 250px;
+    height: 200px;
 }
 .card {
     margin-top: 30px;
     width: 290px;
     float: left;
 }
+span {
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 50%;
+}
 
 button{
-    width: 200px;
+    width: 34%;
+
+}
+.item {
+    align-self: center;
 }
