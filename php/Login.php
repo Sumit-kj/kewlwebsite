@@ -26,6 +26,7 @@ $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
          session_start();
          $_SESSION['customer_id']=$myid;
          header('Location: ../index.html');
+         echo "<script>alert('Session started for $myid');</script>";
          exit;
       }else {
          echo "<script>alert('Invalid Credetials!');
