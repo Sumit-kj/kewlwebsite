@@ -8,7 +8,7 @@ $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
 
-      $myusername = mysqli_real_escape_string($db,$_POST['Username']);
+      $myusername = mysqli_real_escape_string($db,$_POST['name']);
       $mypassword = mysqli_real_escape_string($db,$_POST['Password']);
 
       $sql = "SELECT * FROM customer WHERE EMAIL = '$myusername' AND PASS = '$mypassword'";
