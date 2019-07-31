@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <head>
     <title>
-         kewlWorld
+         KewlWorld
     </title>
-    <h1 style="text-align: center" class="cbk" >
-        WELCOME TO KEWLWORLD
-    </h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <script src="js/home.js"></script>
+    <script>
+    var loginSignupBtnClicked = function(){
+        window.location.href='/form.html';
+        };</script>
 </head>
 <body>
-    <div class="hor">
+    <div class="titleLine" style="align-items: stretch">
+        <h1 class="cbk" >
+            WELCOME TO KEWLWORLD
+        </h1>
+        <button id="loginbtn" onclick="loginSignupBtnClicked()"><i class="fa fa-user-circle"></i></button> 
+        <button id="cartbtn" onclick="cartBtnClicked()"><i class="fa fa-shopping-cart"></i></button> 
+
+    </div>
+            
+    <div class="horizon">
+
     <ul>
         <li class="home khoj">Home</li>
         <li class="band khoj">Hand-Band</li>

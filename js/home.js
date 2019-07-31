@@ -5,12 +5,15 @@ document.addEventListener("DOMContentLoaded",function(){
         var attr=this.parentElement.childNodes[9];
         // console.log(attr);
         var val2 = parseInt(attr.innerHTML);
-        if(val2==1)
+        if(val2==0)
         {
             this.parentElement.childNodes[7].disabled=false;
         }
         val2++;
-        attr.innerHTML=val2;
+        if(val2<10)
+            attr.innerHTML="0"+val2;
+        else
+            attr.innerHTML=val2;
 
     }
 
@@ -28,7 +31,10 @@ document.addEventListener("DOMContentLoaded",function(){
             else{
                 this.disabled=false;
             val3--;
-            attr2.innerHTML=val3;
+            if(val3<10)
+                attr2.innerHTML="0"+val3;
+            else
+                attr2.innerHTML=val3;
             // console.log(attr2);
             }
     
@@ -90,6 +96,8 @@ document.addEventListener("DOMContentLoaded",function(){
     // {
     //     itemImage[i].innerHTML="<img class=\"item_image\" src=\'"+arrayImages[i]+"' width=\"15%\"><h4 class=\"item_name\"></h4><h4 class=\"item_price\"></h4><button class=\"buy_button\">BUY</button>";
     // }
+
 });
+
 
 

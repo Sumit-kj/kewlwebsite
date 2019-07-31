@@ -18,10 +18,11 @@
     }
     span {
         width: 5px;
+        padding-right: 200px;
     }
     input {
         position: absolute;
-        left: 100px;
+        left: 110px;
         width: 200px;
     }
     #reg {
@@ -31,16 +32,22 @@
         position: absolute;
         right: 10px;
     }
+    .btn{
+        margin-left:5%;
+        width:30%;
+        height: 100%;
+    }
     </style>
     </head>
     <body>
 <form action="/kewlwebsite/php/Login.php" method="POST">
     
-  <span> Username:</span>
+  <span> Username: </span>
   <input type="text" name="name" required><br><br>
-  <span>Password:</span>
+  <span>Password: </span>
   <input type="password" name="Password" id="pass" required/><br><br>    
-    <input type="submit" value="Login"/>
+    <button class="btn" type="submit" >Log In</button>
+
   </form>
   </body>
   </html>
