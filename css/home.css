@@ -34,8 +34,9 @@ li:hover{
 }
 
 .cbk{
-    align-self: auto;
+    /* align-self: auto; */
     display: inline;
+    margin-left:30%;
     /* align-self: center; */
 
     width: 100%;
