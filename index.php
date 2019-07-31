@@ -8,7 +8,7 @@
     <script src="js/home.js"></script>
     <script>
     var loginSignupBtnClicked = function(){
-        window.location.href='/form.html';
+        window.location.href='./form.html';
         };</script>
 </head>
 <body>
@@ -34,8 +34,11 @@
     </ul>
     </div>
 <div class="grid-container ">
+
+<?php include '/php/populateMenu.php';?>
+    
 <!-- /*<div class="card-container">*/ -->
-    <div class="band item vis">
+    <!-- <div class="band item vis">
     
         <img class="item_image" src ="res/band1.jpg" width="15%"/>
         <h4 class="item_name"></h4>
@@ -108,7 +111,7 @@
     <span id="count">00</span>
     <button class="ADD">+</button></div>
     
-</div>
+</div> -->
 </div>
 
 
