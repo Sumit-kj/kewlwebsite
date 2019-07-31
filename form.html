@@ -2,6 +2,7 @@
 <html>
 <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
 <style>
     body{
         background:url("https://i.pinimg.com/originals/c8/41/9b/c8419bc328f95517200446ab7a6fe035.jpg");
@@ -9,11 +10,11 @@
     }
     form {
         background:khaki;
-        margin:auto;
-        top:150px;
-        width:300px;
+        margin-left:10%;
+        margin-top:10%;
+        width:30%;
         border:2px solid black;
-        position: relative;
+        position: absolute;
         padding:30px;
     }
     span {
@@ -23,7 +24,7 @@
     input {
         position: absolute;
         left: 110px;
-        width: 200px;
+        width: 50%;
     }
     #reg {
         width: 100px;
@@ -33,21 +34,26 @@
         right: 10px;
     }
     .btn{
-        margin-left:5%;
+        
         width:30%;
         height: 100%;
+    }
+    a{
+        float: right;
+        text-decoration:None;
     }
     </style>
     </head>
     <body>
+            <h1 style="color:white;margin-left:20%;margin-top:5%;">Login to Kewlworld</h1>
 <form action="/kewlwebsite/php/Login.php" method="POST">
     
   <span> Username: </span>
   <input type="text" name="name" required><br><br>
   <span>Password: </span>
-  <input type="password" name="Password" id="pass" required/><br><br>    
+  <input type="password" name="Password" id="pass" required/><br><br> <br>   
     <button class="btn" type="submit" >Log In</button>
-
+    <a href="form2.html">New User ? &nbsp; <button type="button">Sign Up</button></a>
   </form>
   </body>
   </html>

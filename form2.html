@@ -4,14 +4,15 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
     body{
-        background:url("https://i.pinimg.com/originals/c8/41/9b/c8419bc328f95517200446ab7a6fe035.jpg");
+        background:url("https://miro.medium.com/max/1670/1*oOtRtHpzYfx7UbnMttFCNg.png");
         background-size: 100%;
     }
     form {
-        background:khaki;
-        margin:auto;
-        top:150px;
-        width:300px;
+        background:lightblue;
+        margin-left:10%;
+
+        margin-top:15%; 
+        width:25% ;
         border:2px solid black;
         position: relative;
         padding:30px;
@@ -21,11 +22,12 @@
     }
     input {
         position: absolute;
-        left: 100px;
-        width: 200px;
+        left: 30%;
+        width: 50%;
     }
     #reg {
-        width: 100px;
+        width: 20%;
+        float:left;
     }
     .view {
         position: absolute;
@@ -34,6 +36,44 @@
     </style>
 </head>
 <body>
+    
+<script>
+var verifyConfPass = function() {
+    if (document.getElementById('pass').value ==
+      document.getElementById('confPass').value) {
+      document.getElementById('confPass').style.color = 'green';
+      // document.getElementById('message').innerHTML = 'matching';
+    } else {
+      document.getElementById('confPass').style.color = 'red';
+      // document.getElementById('message').innerHTML = 'not matching';
+    }
+  }
+          function myfunc()
+          {
+              // document.getElementById('reg').onclick=window.alert("You have successfully Registered");
+  
+          }
+          function clickVisible(event,par){
+              event.preventDefault();
+              if(par==1){
+                  var icon = document.getElementById("sym1");
+                  var val = document.getElementById("pass");
+              }
+              else{
+              var val=document.getElementById("confPass");
+              var icon = document.getElementById("sym2");
+              }
+              if(icon.className==="fa fa-eye")
+              icon.className="fa fa-eye-slash";
+              else
+              icon.className="fa fa-eye";
+              if(val.type === 'password')
+                  val.type = 'text';
+              else   
+                  val.type = 'password';
+                  
+          }
+      </script>
 <form id="main" action="./php/signup.php" method="POST">
     <span>Email: </span>
         <input type="text" name="Username" required><br><br>
@@ -47,45 +87,10 @@
         <input id="confPass" type="password" name="Retype_Password" onkeyup="verifyConfPass()" required >
     <button id="confPass1" class="view" type="button" onclick="clickVisible(event,2)"><i id="sym2" class="fa fa-eye"></i></button>
     <br><br>
-    <input type="submit" id="reg" value="Register" onclick="myfunc()"/>
-    <script>
-
-var verifyConfPass = function() {
-  if (document.getElementById('pass').value ==
-    document.getElementById('confPass').value) {
-    document.getElementById('confPass').style.color = 'green';
-    // document.getElementById('message').innerHTML = 'matching';
-  } else {
-    document.getElementById('confPass').style.color = 'red';
-    // document.getElementById('message').innerHTML = 'not matching';
-  }
-}
-        function myfunc()
-        {
-            // document.getElementById('reg').onclick=window.alert("You have successfully Registered");
-
-        }
-        function clickVisible(event,par){
-            event.preventDefault();
-            if(par==1){
-                var icon = document.getElementById("sym1");
-                var val = document.getElementById("pass");
-            }
-            else{
-            var val=document.getElementById("confPass");
-            var icon = document.getElementById("sym2");
-            }
-            if(icon.className==="fa fa-eye")
-            icon.className="fa fa-eye-slash";
-            else
-            icon.className="fa fa-eye";
-            if(val.type === 'password')
-                val.type = 'text';
-            else   
-                val.type = 'password';
-                
-        }
-    </script>
+    <button type="submit" id="reg" value="Register" onclick="myfunc()">Register</button>
+    <a href="form.html" style="float: right;text-decoration: none" >Already a Member?&nbsp;&nbsp;<button type="button">Log In</button></a> 
+    <br>
+    
   </form> 
   </body>
   </html>

@@ -125,7 +125,7 @@ button{
     border-bottom-left-radius: 10px;
 }
 
-#loginbtn  {
+#loginbtn,#cartbtn  {
     width: 3%;
         border-radius: 50%;
     
@@ -133,3 +133,4 @@ button{
     height: 150%;
     /* display: inline; */
 } 
+
