@@ -35,7 +35,7 @@
     </div>
 <div class="grid-container ">
 
-<?php include '/php/populateMenu.php';?>
+<?php include "./php/populateMenu.php";?>
     
 <!-- /*<div class="card-container">*/ -->
     <!-- <div class="band item vis">
