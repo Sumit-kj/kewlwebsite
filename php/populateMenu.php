@@ -24,10 +24,11 @@ if($count > 0) {
         $name = $row['ITEM_NAME'];
         $price = $row['ITEM_PRICE'];
         $location = $row['ITEM_IMAGE'];
+        $id = $row['ITEM_ID'];
         // echo "<pre></pre>";
         // print_r($row);
         // exit;
-        echo '<div class="'.$category.' item vis">';
+        echo '<div class="'.$category.' item vis" id="'.$id.'">';
         echo '<img class="item_image" src=".'.$location.'" width="15%"></img>';
         echo '<h4 class="item_name">'.$name.'</h4>';
         echo '<h4 class="item_price">₹ '.$price.'</h4>';
