@@ -75,11 +75,14 @@ li:hover{
 .item_price{
     color: white;
     text-align: center;
+    margin: 0px;
+    background-color: brown;
 }
 
 .item_name{
     color: white;
     text-align: center;
+    margin:2px;
     
 }
 .band1 {
