@@ -1,41 +1,51 @@
+var cart_array = [];
+var total_amount = 0;
 document.addEventListener("DOMContentLoaded",function(){
     var cn=document.getElementsByClassName("ADD");
     var myfunc=function() {
         var attr=this.parentElement.childNodes[4];
-        console.log(attr);
+        var id = this.parentElement.id;
         var val2 = parseInt(attr.innerHTML);
-        console.log(val2);
+        var price = this.parentElement.childNodes[2].innerHTML.split(" ")[1];
+        console.log(price);
         if(val2==0)
         {
             this.parentElement.childNodes[3].disabled=false;
+            cart_array[id] = val2;
         }
         val2++;
-
+        total_amount+=parseInt(price);
+        cart_array[id] = val2;
+        console.log(cart_array);
         if(val2<10)
             attr.innerHTML="0"+val2;
         else
             attr.innerHTML=val2;
-            console.log("Add clicked!");
     }
-
    
         var cn2=document.getElementsByClassName("SUB");
         var subfunc=function() {
             var attr2=this.parentElement.childNodes[4];
             var val3= parseInt(attr2.innerHTML);
-            if(val3==0)
+            var price = this.parentElement.childNodes[2].innerHTML.split(" ")[1];
+            if(val3==0){
+                return;
+            }
+            else if(val3==1)
             {
                 this.disabled=true;
             }
             else{
                 this.disabled=false;
+            }
             val3--;
+            total_amount-=parseInt(price);
             if(val3<10)
                 attr2.innerHTML="0"+val3;
             else
                 attr2.innerHTML=val3;
             // console.log(attr2);
-            }
+            // console.log("Total = "+total_amount);
     
         }
 
@@ -63,13 +73,13 @@ document.addEventListener("DOMContentLoaded",function(){
             {
                 if(itemsArray[iter]!=mila[milaCount]){
                     itemsArray[iter].style.display = 'none';
-                    console.log(itemsArray[iter]);
+                    // console.log(itemsArray[iter]);
                 }
                 else{
                     milaCount++;
                     itemsArray[iter].style.display = 'block';
-                    console.log("Not Hidden");
-                    console.log(itemsArray[iter]);
+                    // console.log("Not Hidden");
+                    // console.log(itemsArray[iter]);
                 }
             }          
         }
