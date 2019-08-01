@@ -32,7 +32,7 @@ if($count > 0) {
         echo '<h4 class="item_name">'.$name.'</h4>';
         echo '<h4 class="item_price">₹ '.$price.'</h4>';
         echo '<button class="SUB">-</button>';
-        echo '<span id="count">'.$start_value.'</span>';
+        echo '<span id="count">00</span>';
         echo '<button class="ADD">+</button></div>';
     }while($row = $result->fetch_assoc());
 }

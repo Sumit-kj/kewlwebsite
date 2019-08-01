@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded",function(){
     var cn=document.getElementsByClassName("ADD");
-    // console.log(cn);
     var myfunc=function() {
         var attr=this.parentElement.childNodes[4];
         console.log(attr);
@@ -11,6 +10,7 @@ document.addEventListener("DOMContentLoaded",function(){
             this.parentElement.childNodes[3].disabled=false;
         }
         val2++;
+
         if(val2<10)
             attr.innerHTML="0"+val2;
         else
@@ -20,10 +20,8 @@ document.addEventListener("DOMContentLoaded",function(){
 
    
         var cn2=document.getElementsByClassName("SUB");
-        // console.log(cn2);
         var subfunc=function() {
             var attr2=this.parentElement.childNodes[4];
-            // console.log(attr2);
             var val3= parseInt(attr2.innerHTML);
             if(val3==0)
             {
@@ -58,11 +56,6 @@ document.addEventListener("DOMContentLoaded",function(){
             }
             var mila=document.getElementsByClassName(foundClass);
 
-            
-            // for(var j=0;j<mila.length;j++)
-            // {
-            //     console.log(mila[j]);
-            // }
             var milaCount = 1;
             console.log(mila);
             var itemsArray = document.getElementsByClassName('item');
@@ -99,7 +92,7 @@ document.addEventListener("DOMContentLoaded",function(){
     // }
 
     var cartBtnClicked = function(){
-        location.href = "cartPopulate.php";
+        location.href = "../php/storeCart.php";
     }
 
 });
