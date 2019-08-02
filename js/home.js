@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded",function(){
         var cn2=document.getElementsByClassName("SUB");
         var subfunc=function() {
             var attr2=this.parentElement.childNodes[4];
+            var id = this.parentElement.id;
             var val3= parseInt(attr2.innerHTML);
             var price = this.parentElement.childNodes[2].innerHTML.split(" ")[1];
             if(val3==0){
@@ -34,17 +35,19 @@ document.addEventListener("DOMContentLoaded",function(){
             else if(val3==1)
             {
                 this.disabled=true;
+                delete cart_array[id];
             }
             else{
                 this.disabled=false;
             }
             val3--;
             total_amount-=parseInt(price);
+            cart_array[id] = val3;
             if(val3<10)
                 attr2.innerHTML="0"+val3;
             else
                 attr2.innerHTML=val3;
-            // console.log(attr2);
+            console.log(cart_array);
             // console.log("Total = "+total_amount);
     
         }
@@ -94,6 +97,7 @@ document.addEventListener("DOMContentLoaded",function(){
     {
         cn3[i].addEventListener("click",visfunc,false);
     }
+
     var itemImage=document.getElementsByClassName("card_container");
     var arrayImages=["band1.jpg","band2.jpg","cap1.jpg","cap2.jpg","chain1.jpg","chain2.jpg","shade1.jpg","shade2.jpg","vest1.jpg","vest2.jpg"];
     // for(var i=0;i<arrayImages.length;i++)
@@ -102,8 +106,14 @@ document.addEventListener("DOMContentLoaded",function(){
     // }
 
     var cartBtnClicked = function(){
-        location.href = "../php/storeCart.php";
+        alert("Added to Cart!");
+        <%Session["Test"] = "Welcome Mamu";%>
+        var session_value='<%=Session["Test"]%>'; 
+        alert(session_value);        location.href = "./php/storeCart.php";
     }
+    var cartBtn = document.getElementById("cartbtn");
+    console.log(cartBtn);
+    cartBtn.addEventListener("click",cartBtnClicked,false);
 
 });
 

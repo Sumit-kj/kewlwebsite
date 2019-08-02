@@ -33,7 +33,7 @@ $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
           $sql2="INSERT INTO customer VALUES ('$myusername','$myname','$mypassword')";
           $result = mysqli_query($db,$sql2);
           echo "<script>alert('Successfully Registered!');
-          window.location.href='../index.html';</script>";
+          window.location.href='../index.php';</script>";
 
       }
     }

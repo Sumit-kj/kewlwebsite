@@ -14,9 +14,9 @@ $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
       $sql = "SELECT * FROM customer WHERE EMAIL = '$myusername' AND PASS = '$mypassword'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
 
-      $myid = $row['email'];
+      $myid = $row['EMAIL'];
+      echo $myid;
       
       $count = mysqli_num_rows($result);
 
@@ -25,8 +25,9 @@ $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
       if($count == 1) {
          session_start();
          $_SESSION['customer_id']=$myid;
-         header('Location: ../index.html');
          echo "<script>alert('Session started for $myid');</script>";
+         print_r($_SESSION);
+         header('Location: ../index.php');
          exit;
       }else {
          echo "<script>alert('Invalid Credetials!');

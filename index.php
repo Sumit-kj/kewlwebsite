@@ -17,7 +17,7 @@
             WELCOME TO KEWLWORLD
         </h1>
         <button id="loginbtn" onclick="loginSignupBtnClicked()"><i class="fa fa-user-circle"></i></button> 
-        <button id="cartbtn" onclick="cartBtnClicked()"><i class="fa fa-shopping-cart"></i></button> 
+        <button id="cartbtn" ><i class="fa fa-shopping-cart"></i></button> 
 
     </div>
             
@@ -35,7 +35,8 @@
     </div>
 <div class="grid-container ">
 
-<?php include "./php/populateMenu.php";?>
+<?php include "./php/populateMenu.php";
+?>
     
 <!-- /*<div class="card-container">*/ -->
     <!-- <div class="band item vis">
